@@ -7,9 +7,9 @@
                     <div class="card-header">Test Video</div>
 
                     <div class="card-body">
-                            <video-js id="Player" class="vjs-default-skin" controls preload="auto" width="640" height="268">
-                                <source src="https://www.w3schools.com/html/mov_bbb.mp4">
-                            </video-js>
+                            <video ref="Player" class="vjs-default-skin" controls preload="auto" width="640" height="268">
+                                <source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL">
+                            </video>
                         <br>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
         },
 
         mounted() {
-            videojs('Player');
+            videojs(this.$refs.Player);
         }
     }
 </script>
