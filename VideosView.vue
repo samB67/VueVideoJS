@@ -7,9 +7,9 @@
                     <div class="card-header">Test Video</div>
 
                     <div class="card-body">
-                            <video ref="Player" class="vjs-default-skin" controls preload="auto" width="640" height="268">
+                            <video-js ref="Player" class="vjs-default-skin" controls preload="auto" width="640" height="268">
                                 <source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL">
-                            </video>
+                            </video-js>
                         <br>
                     </div>
                 </div>
@@ -20,13 +20,12 @@
 <script>
     // custom skin css
     import 'vue-video-player/src/custom-theme.css'
-    // videojs
+    // Import videojs..
     import videojs from 'video.js'
     window.videojs = videojs
-
-
-    // hls plugin for videojs6
-    // require('videojs-contrib-hls/dist/videojs-contrib-hls.js')
+    
+    // Require http-streaming plugin..
+    require('@videojs/http-streaming/src/videojs-http-streaming.js');
 
     export default {
         name: "VideosPage",
